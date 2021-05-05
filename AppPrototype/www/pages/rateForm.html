@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="../css/suggestionForm.css">
+	<link rel="stylesheet" href="../css/navbar.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Security-Policy" content="connect-src *"/>
+	<title>Suggestion Form</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/rateForm.js"></script>
+	<style>
+		table {table-layout: fixed;
+			width: 90%;
+			height: auto;
+			margin-top: 15vh;
+			margin-right: auto;
+			margin-left: auto;}
+		td {vertical-align: middle;}
+		table, th, td {border: 1px solid black;}
+		form#submitRateForm{padding: 0;}
+		td#col1, td#col4{width: 10%;}
+
+	</style>
+</head>
+
+<header class="header-img">
+	<img src="../img/Icon_better.png" class="header-img">
+
+</header>
+
+<body>
+<form id="submitRateForm" enctype="multipart/form-data">
+	<div class="app">
+		<table>
+			<tbody>
+			<tr>
+				<td class="question" id="col1">Question</td>
+				<td class="question" colspan="2">Evaluation possibility</td>
+				<td class="question" colspan="2">Evaluation</td>
+			</tr>
+			<tr>
+
+				<td class="question" colspan="2" >The idea is...</td>
+				<td>&nbsp;</td>
+				<td class="question">Value</td>
+				<td class="question">Weighting</td>
+			</tr>
+			<tr>
+				<td id="col1"><span>1</span></td>
+				<td>… very new</td>
+				<td>Selection:<br>
+					- Fully agree<br>
+					- More likely to agree<br>
+					- Neither nor<br>
+					- Rather not agree<br>
+					- Do not agree at all</td>
+				<td id="col4">
+					<input type="radio" id="idea1rate-5" name="idea1" value=5 onclick="showWeightValue(5, 1, 0.11)">
+					<label for="idea1rate-5">5</label><br>
+					<input type="radio" id="idea1rate-4" name="idea1" value=4 onclick="showWeightValue(4, 1, 0.11)">
+					<label for="idea1rate-4">4</label><br>
+					<input type="radio" id="idea1rate-3" name="idea1" value=3 onclick="showWeightValue(3, 1, 0.11)">
+					<label for="idea1rate-3">3</label><br>
+					<input type="radio" id="idea1rate-2" name="idea1" value=2 onclick="showWeightValue(2, 1, 0.11)">
+					<label for="idea1rate-2">2</label><br>
+					<input type="radio" id="idea1rate-1" name="idea1" value=1 onclick="showWeightValue(1, 1, 0.11)">
+					<label for="idea1rate-1">1</label>
+				</td>
+				<td id="weight1"></td>
+			</tr>
+			<tr>
+				<td id="col1" >2</td>
+				<td>… well suited to solve the problem.</td>
+				<td id="col3">Selection:<br>
+					- Fully agree<br>
+					- More likely to agree<br>
+					- Neither nor<br>
+					- Rather not agree<br>
+					- Do not agree at all</td>
+				<td id="col4">
+					<input type="radio" id="idea2rate-5" name="idea2" value=5 onclick="showWeightValue(5, 2, 0.11)">
+					<label for="idea2rate-5">5</label><br>
+					<input type="radio" id="idea2rate-4" name="idea2" value=4 onclick="showWeightValue(4, 2, 0.11)">
+					<label for="idea2rate-4">4</label><br>
+					<input type="radio" id="idea2rate-3" name="idea2" value=3 onclick="showWeightValue(3, 2, 0.11)">
+					<label for="idea2rate-3">3</label><br>
+					<input type="radio" id="idea2rate-2" name="idea2" value=2 onclick="showWeightValue(2, 2, 0.11)">
+					<label for="idea2rate-2">2</label><br>
+					<input type="radio" id="idea2rate-1" name="idea2" value=1 onclick="showWeightValue(1, 2, 0.11)">
+					<label for="idea2rate-1">1</label>
+				</td>
+				<td id="weight2"></td>
+			</tr>
+			<tr>
+				<td id="col1" >3</td>
+				<td>… relevant for many user.</td>
+				<td id="col3">Selection:<br>
+					- Fully agree<br>
+					- More likely to agree<br>
+					- Neither nor<br>
+					- Rather not agree<br>
+					- Do not agree at all</td>
+				<td id="col4">
+					<input type="radio" id="idea3rate-5" name="idea3" value=5 onclick="showWeightValue(5, 3, 0.11)">
+					<label for="idea3rate-5">5</label><br>
+					<input type="radio" id="idea3rate-4" name="idea3" value=4 onclick="showWeightValue(4, 3, 0.11)">
+					<label for="idea3rate-4">4</label><br>
+					<input type="radio" id="idea3rate-3" name="idea3" value=3 onclick="showWeightValue(3, 3, 0.11)">
+					<label for="idea3rate-3">3</label><br>
+					<input type="radio" id="idea3rate-2" name="idea3" value=2 onclick="showWeightValue(2, 3, 0.11)">
+					<label for="idea3rate-2">2</label><br>
+					<input type="radio" id="idea3rate-1" name="idea3" value=1 onclick="showWeightValue(1, 3, 0.11)">
+					<label for="idea3rate-1">1</label>
+				</td>
+				<td id="weight3"></td>
+			</tr>
+			<tr>
+				<td id="col1">4</td>
+				<td>… easy to integrate into the work process.</td>
+				<td id="col3">Selection:<br>
+					- Fully agree<br>
+					- More likely to agree<br>
+					- Neither nor<br>
+					- Rather not agree<br>
+					- Do not agree at all</td>
+				<td id="col4">
+					<input type="radio" id="idea4rate-5" name="idea4" value=5 onclick="showWeightValue(5, 4, 0.17)">
+					<label for="idea4rate-5">5</label><br>
+					<input type="radio" id="idea4rate-4" name="idea4" value=4 onclick="showWeightValue(4, 4, 0.17)">
+					<label for="idea4rate-3">4</label><br>
+					<input type="radio" id="idea4rate-3" name="idea4" value=3 onclick="showWeightValue(3, 4, 0.17)">
+					<label for="idea4rate-3">3</label><br>
+					<input type="radio" id="idea4rate-2" name="idea4" value=2 onclick="showWeightValue(2, 4, 0.17)">
+					<label for="idea4rate-2">2</label><br>
+					<input type="radio" id="idea4rate-1" name="idea4" value=1 onclick="showWeightValue(1, 4, 0.17)">
+					<label for="idea4rate-1">1</label>
+				</td>
+				<td id="weight4"></td>
+			</tr>
+			<tr>
+				<td id="col1" >5</td>
+				<td>… technically easy to realize. </td>
+				<td id="col3">Selection:<br>
+					- Fully agree<br>
+					- More likely to agree<br>
+					- Neither nor<br>
+					- Rather not agree<br>
+					- Do not agree at all</td>
+				<td id="col4">
+					<input type="radio" id="idea5rate-5" name="idea5" value=5 onclick="showWeightValue(5, 5, 0.17)">
+					<label for="idea5rate-5">5</label><br>
+					<input type="radio" id="idea5rate-4" name="idea5" value=4 onclick="showWeightValue(4, 5, 0.17)">
+					<label for="idea5rate-4">4</label><br>
+					<input type="radio" id="idea5rate-3" name="idea5" value=3 onclick="showWeightValue(3, 5, 0.17)">
+					<label for="idea5rate-3">3</label><br>
+					<input type="radio" id="idea5rate-2" name="idea5" value=2 onclick="showWeightValue(2, 5, 0.17)">
+					<label for="idea5rate-2">2</label><br>
+					<input type="radio" id="idea5rate-1" name="idea5" value=1 onclick="showWeightValue(1, 5, 0.17)">
+					<label for="idea5rate-1">1</label>
+				</td>
+				<td id="weight5"></td>
+			</tr>
+			<tr>
+				<td id="col1" >6</td>
+				<td>The added value consists in… </td>
+				<td id="col3">Selection:<br>
+					- Reduction of material, time or
+					energy<br>
+					- Qualitative or quantitative
+					improvement<br>
+					- Increase in occupational safety,
+					health <br>&nbsp;  protection, environmental
+					protection, <br>&nbsp;  sustainability,
+					effectiveness of social facilities<br>
+					- Contribution to public relations
+					and advertising</td>
+				<td><textarea rows='3' id="addedValue" name="addedValue"></textarea></td>
+				<td id="placeHolder">N/A</td>
+			</tr>
+			<tr>
+				<td id="col1" >7</td>
+				<td>Your cost estimate for conversion into euros.</td>
+				<td>Free text input</td>
+				<td><textarea rows='3' id="costEstimate" name="costEstimate"></textarea></td>
+				<td id="placeHolder">N/A</td>
+			</tr>
+			<tr>
+				<td id="col1">8</td>
+				<td>The idea brings added value.* </td>
+				<td id="col3">Selection:<br>
+					- Fully agree<br>
+					- More likely to agree<br>
+					- Neither nor<br>
+					- Rather not agree<br>
+					- Do not agree at all</td>
+				<td id="col4">
+					<input type="radio" id="idea8rate-5" name="idea8" value=5 onclick="showWeightValue(5, 8, 0.33)">
+					<label for="idea8rate-5">5</label><br>
+					<input type="radio" id="idea8rate-4" name="idea8" value=4 onclick="showWeightValue(4, 8, 0.33)">
+					<label for="idea8rate-5">4</label><br>
+					<input type="radio" id="idea8rate-3" name="idea8" value=3 onclick="showWeightValue(3, 8, 0.33)">
+					<label for="idea8rate-5">3</label><br>
+					<input type="radio" id="idea8rate-2" name="idea8" value=2 onclick="showWeightValue(2, 8, 0.33)">
+					<label for="idea8rate-5">2</label><br>
+					<input type="radio" id="idea8rate-1" name="idea8" value=1 onclick="showWeightValue(1, 8, 0.33)">
+					<label for="idea8rate-5">1</label>
+				</td>
+				<td id="weight8"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>My comments on the idea/ justification of my assessment.</td>
+				<td>Free text input</td>
+				<td><textarea rows='3' id="additionalComments" name="additionalComments"></textarea></td>
+				<td id="placeHolder">N/A</td>
+			</tr>
+			</tbody>
+		</table>
+		<div class="btn-block">
+			<button type="submit" id="submit" name="submit">Submit</button>
+			<button type="submit" id="goback" name="goback" onclick="window.location = '../pages/menu.html';">Go Back</button>
+		</div>
+	</div>
+</form>
+</body>
+<script>
+	function showWeightValue(numVal, weightIDNum, weightPer){
+		document.getElementById('weight' + weightIDNum).innerHTML = ((((numVal * 20) / 100) * weightPer) * 100).toFixed(2) + "%";
+	}
+</script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="initial-scale=1, width=device-width, height=device-height, viewport-fit=cover">
+
+<head>
+    <link rel="stylesheet" href="./css/loginPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta http-equiv="Content-Security-Policy" content="connect-src *"/>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/login.js"></script>
+</head>
+<body class="fadeIn form">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+<header class="header-img">
+    <img src="./img/Icon_better.png" class="header-img">
+</header>
+<div class="testbox fadeInDown" style="margin:center;">
+    <h1 class="fadeIn first" style="font-weight:bold;color:#d72622;">Login</h1>
+    <form>
+        <hr>
+        <div class="accounttype fadeIn first">
+            <input type="radio" value="None" id="radioOne" name="account" checked/>
+            <label for="radioOne" class="radio" >Login</label>
+            <input type="radio" value="None" id="radioTwo" name="account" onclick="window.location='./pages/registryPage.html';"/>
+            <label for="radioTwo" class="radio">Register</label>
+        </div>
+        <hr>
+    <div class="fadeIn second">
+        <div><label id="icon" for="empid"><i class="fa fa-address-card-o" aria-hidden="true"></i></label>
+            <input type="email" name="empidinput" id="empid" value="" placeholder="Email" required/></div>
+        <div><label id="icon" for="password"><i class="fa fa-shield" aria-hidden="true"></i></label>
+            <input type="password" name="passwordinput" id="password" value="" placeholder="Password" style="margin-bottom: 25px;" required/></div>
+        <div style="text-align:center;">
+            <a href="./pages/forgotPassword.html">Forgot Password?</a>
+        </div>
+        <div class="fadeIn third" style="margin-top:1vh;">
+            <input type="checkbox" class="larger" name="check" id="check" value="Yes" style="margin-left: 25px; margin-top: 25px; margin-bottom:25px;" required>
+            <label for="check" style="margin-left:15px; align:center; font-size: 10px;">I agree to basic data protection regulation</label>
+        </div>
+    </div>
+        <div class="btn-block fadeIn fourth" style="padding-top:4vh;padding-bottom:2vh">
+            <button type="submit" id="submit" name="check" >Login</button>
+        </div>
+    </form>
+
+
+</div>
+
+</body>
+</html>

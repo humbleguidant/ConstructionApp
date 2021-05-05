@@ -1,0 +1,24 @@
+a{
+  text-decoration: none;
+}
+
+.menu-btn{
+  font-family: 'Roboto';
+  font-size: 20px;
+  text-align: center;
+  margin: auto;
+  width: 85%;
+  height: 50px;
+  line-height: 50px;
+  background-color: red;
+  padding: 20px;
+  color: white;
+  margin-top: 40px;
+}
+
+.fa {
+  font-size: 40px;
+  position: relative;
+  top: 7px;
+  margin-left: 10px;
+}

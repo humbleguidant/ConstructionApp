@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/suggestionForm.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="connect-src *"/>
+    <title>Suggestion Form</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/suggestionForm.js"></script>
+</head>
+<body>
+<header class="header-img">
+    <img src="../img/Icon_better.png" class="header-img">
+
+</header>
+
+<div class="testbox">
+    <form id="submitForm" enctype="multipart/form-data">
+        <h1 style="text-align:center">Create a new Idea</h1>
+
+        <p style="font-weight:bold; font-size:3vh; color:#000000; padding-top:2vh; padding-bottom:1vh;">The idea is from</p>
+        <div class="question-answer">
+            <label><input type="radio" id="myIdea" value="self" name="idea" onclick="hideUserInfo()"/> Myself</label>
+        </div>
+        <div class="question-answer">
+
+            <div>
+                <input type="radio" id="someoneElse" name="idea"><input type="text" id="ideaName" name="ideaName" placeholder="Someone Else" onclick="getUserInfo()">
+
+            </div>
+
+        </div>
+
+
+        <div>
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title" placeholder="Title of the new idea" required><br>
+        </div>
+
+        <div>
+            <label for="location">Location/Site:</label><br>
+            <input type="text" id="location" name="location" placeholder="Address of the location"><br>
+        </div>
+
+        <div>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+        </div>
+
+        <p class="question">Please provide a description of the problem:</p>
+        <textarea rows="5" id="problem" name="problem" placeholder="Description of the problem" required></textarea>
+
+        <p class="question">Please provide a description of the proposed solution:</p>
+        <textarea rows="5" id="proposal" name="proposal" placeholder="Problem? Solution? New? Feasible?"></textarea>
+
+        <label for="feasability">Feasability: </label>
+
+        <select name="feasability" id="feasability">
+            <option value="Very Easy">Very Easy</option>
+            <option value="Easy">Easy</option>
+            <option value="Neither">Neither</option>
+            <option value="Hard">Hard</option>
+            <option value="Very Hard">Very Hard</option>
+        </select>
+
+        <p class="question">Advantages (Select all that apply):</p>
+        <div class="question-answer">
+            <label><input type="checkbox" id="adv1" value="Reduction of material, time, or energy" name="advantages[]"/> Reduction of material, time, or energy</label>
+        </div>
+        <div class="question-answer">
+            <label><input type="checkbox" id="adv2" value="Qualitative or Quantitative Improvement" name="advantages[]"/> Qualitative or Quantitative Improvement</label>
+        </div>
+        <div class="question-answer">
+            <label><input type="checkbox" id="adv3" value="Increase in occupational safety, health protection, environmental protection, sustainability, effectiveness of social facilities" name="advantages[]"/> Increase in occupational safety, health protection, environmental protection, sustainability, effectiveness of social facilities</label>
+        </div>
+        <div class="question-answer">
+            <label><input type="checkbox" id="adv4" value="Contribution to Public Relations and advertising" name="advantages[]"/> Contribution to Public Relations and advertising</label>
+        </div>
+
+
+
+        <p class="question">Has the proposed solution already been tried?</p>
+        <div class="question-answer">
+            <label><input type="radio" id="yesradio" value="Yes" name="tried" onclick="showMoreDescription()"/> Yes</label>
+        </div>
+        <div class="question-answer">
+            <label><input type="radio" id="noradio" value="No" name="tried" onclick="hideMoreDescription()"/> No</label>
+        </div>
+        <div id="exp-desc" style="display:none;">
+            <p class="question">Please describe the experience:</p>
+            <textarea rows="5" id="experience" name="experience"></textarea>
+            <input type="file" id="file" name="file">
+        </div>
+
+
+
+
+        <p class="question">Please Select an Employee Reward</p>
+
+        <input type="radio" name="reward" id="powerbank-radio" value="Power Bank">
+        <label for="powerbank-radio"><img src="../img/pb.PNG" alt="Powerbank" width="120" height="67"></label>
+        <input type="radio" name="reward" id="umbrella-radio" value="Umbrella">
+        <label for="umbrella-radio"><img src="../img/umbrella.PNG" alt="Umbrella" width="120" height="67"></label>
+        <input type="radio" name="reward" id="shirt-radio" value="Shirt">
+        <label for="shirt-radio"><img src="../img/shirt.PNG" alt="Shirt" width="120" height="67"></label>
+        <div class="btn-block">
+            <button type="submit" id="submit" name="submit">Send</button>
+            <button type="submit" id="goback" name="goback" onclick="window.location = '../pages/menu.html';">Go Back</button>
+        </div>
+    </form>
+
+</div>
+</body>
+
+
+
+
+<script>
+    function showMoreDescription(elementId) {
+        var x = document.getElementById("exp-desc");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        }
+    }
+    function getUserInfo(){
+    var element = document.getElementById("someoneElse");
+    element.checked = true;
+    }
+    function hideMoreDescription() {
+        var x = document.getElementById("exp-desc");
+
+        x.style.display = "none";
+    }
+     function hideUserInfo() {
+        var element = document.getElementById("moreInfo");
+
+        element.style.display = "none";
+    }
+</script>
+</html>
