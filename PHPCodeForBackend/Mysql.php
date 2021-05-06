@@ -1,24 +1,43 @@
 <?php
+/* 
+Author: Aubrey Nickerson
+Date: September 25th, 2020
+Program: Mysql.php
+Project: Construction App
+
+This php class communicates with a MySQL database.
+It grabs the credentials from the dbconfig.php and 
+makes a connection to the database. Each function 
+performs a certain query whether its an INSERT or 
+SELECT query. 
+*/
 include("dbconfig.php");
 
 class Mysql extends Dbconfig{
 
+    // Create instance variables
+    // connection status
     public $connectionString;
+    // data set from select query results
     public $dataSet;
+    // sql query string
     private $sqlQuery;
+    // sql result
     public $result;
 
+    // database credentials
     protected $databaseName;
     protected $hostName;
     protected $userName;
     protected $passCode;
 
+    // Grab the credentials from Dbconfig.
     function Mysql()    {
         $this->connectionString = NULL;
         $this->sqlQuery = NULL;
         $this->dataSet = NULL;
         $this->result = NULL;
-
+    
         $dbPara = new Dbconfig();
         $this->databaseName = $dbPara->dbName;
         $this->hostName = $dbPara->serverName;
@@ -27,11 +46,13 @@ class Mysql extends Dbconfig{
         $dbPara = NULL;
     }
 
+    // Make a connection to database.
     function dbConnect()    {
         $this->connectionString = mysqli_connect($this -> hostName, $this -> userName, $this -> passCode, $this -> databaseName);
         return $this->connectionString;
     }
 
+    // Disconnect from database
     function dbDisconnect() {
         $this->connectionString = NULL;
         $this->sqlQuery = NULL;
@@ -42,6 +63,7 @@ class Mysql extends Dbconfig{
         $this->passCode = NULL;
     }
 
+    // Creates a new employee or administrator into the EMPLOYEES table
     function insertQuery($email, $empPasswd, $empPosition, $acceptCondition){
         $this->sqlQuery = "SELECT * FROM EMPLOYEES
                            WHERE EMAIL = '".$email."'";
@@ -56,6 +78,7 @@ class Mysql extends Dbconfig{
         return $this->result;
     }
 
+    // Creates a new form into the FORMS table
     function insertForm($email, $name, $title, $location, $date, $problem, $proposal, $feasability, $advantage, $experience, $uploadFile, $employeeReward){
         $this->sqlQuery = "INSERT INTO FORMS (EMP_EMAIL, CREATOR_NAME, TITLE, LOCATION, DATE_SUBMITTED, PROBLEM, PROPOSAL, FEASABILITY, ADVANTAGE, EXPERIENCE, FILE_NAME, EMPLOYEE_REWARD)
                         VALUES('".$email."', '".$name."', '".$title."', '".$location."', '".$date."', '".$problem."', '".$proposal."', '".$feasability."', '".$advantage."', '".$experience."', '".$uploadFile."', '".$employeeReward."')";
@@ -63,6 +86,7 @@ class Mysql extends Dbconfig{
         return $this->result;
     }
 
+    // Create a new row to the RATE_FORMS table
     function insertRateForm($email, $ideaRadioOne, $ideaRadioTwo, $ideaRadioThree, $ideaRadioFour, $ideaRadioFive, $addedValue, $costEstimate, $ideaRadioEight, $additionalComments, $totalWeight){
         $this->sqlQuery = "INSERT INTO RATE_FORMS (ADMINEMAIL, WEIGHTONE, WEIGHTTWO, WEIGHTTHREE, WEIGHTFOUR, WEIGHTFIVE, ADDEDVALUE, COSTESTIMATE, WEIGHTEIGHT, ADDITIONALCOMMENTS, WEIGHTTOTAL)
                         VALUES('".$email."', ".$ideaRadioOne.", ".$ideaRadioTwo.", ".$ideaRadioThree.", ".$ideaRadioFour.", ".$ideaRadioFive.", '".$addedValue."', '".$costEstimate."', ".$ideaRadioEight.", '".$additionalComments."', ".$totalWeight.")";
@@ -70,6 +94,8 @@ class Mysql extends Dbconfig{
         return $this->result;
     }
 
+    // Grabs the Employees information from the EMPLOYEES table. This function
+    // is called when a user successfully logs in.
     function selectEmployee($email){
         $this->sqlQuery = "SELECT * FROM EMPLOYEES
                            WHERE EMAIL = '".$email."'";
@@ -83,6 +109,7 @@ class Mysql extends Dbconfig{
         return $this->dataSet;
     }
 
+    // Updates the users password in the EMPLOYEES table if the user forgot password
     function updatePassword($email, $eightCharPassword){
         $this->sqlQuery = "SELECT * FROM EMPLOYEES
                            WHERE EMAIL = '".$email."'";
