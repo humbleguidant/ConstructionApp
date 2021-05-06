@@ -6,7 +6,7 @@ Program: rateForm.php
 Project: Construction App
 
 This php script receives an AJAX call from the 
-forgotPassword javascript file. It receives the data
+rate form javascript file. It receives the data
 and creates a connection to the database. The data from
 the AJAX call will be handled with the database. The new 
 rate form will be inserted into the database.
