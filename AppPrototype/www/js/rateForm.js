@@ -9,7 +9,7 @@ It handles the user input and makes
 an AJAX call to a remote server hosting a php
 script. The user input gets sent to the remote server
 and the php script handles the user input. The php script
-sends the data back to forgotPassword.js.
+sends the data back to rateForm.js.
 */
 
 $(document).ready(function() {
