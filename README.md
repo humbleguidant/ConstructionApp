@@ -31,3 +31,10 @@ and the possibility to revoke this consent at any time). <br /> <br />
   • The idea is relevant to many users
   • Easy to integrate into work process <br /> <br />
 
+# Nonfunctional Requirements
+1. Quickly submit issue <br /> <br />
+2. easily submit issue <br /> <br />
+3. Sign-in chooses what you sign in as (worker/innovator) based of what user is registered as <br /> <br />
+4. run on android <br /> <br />
+5. run on ios <br /> <br />
+6. The forms only allow appropriate data types into fields <br /> <br />
