@@ -12,7 +12,7 @@ the AJAX call will be handled with the database.
 The database checks if the user exists.
 */
 
-// Create a MySQL class to make a connection and perform querys
+// Create a MySQL object to make a connection and perform querys
     include("Mysql.php");
     $my_sql = new Mysql();
     $my_sqli = $my_sql->dbConnect();
