@@ -42,7 +42,7 @@ $(document).ready(function() {
                     window.location = "../pages/menu.html";
                     return false;
                 }
-                // If something went wrong the alert the user.
+                // If something went wrong then alert the user.
                 alert(response.message);
                 return false;
             }
