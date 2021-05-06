@@ -1,12 +1,31 @@
+<!-- 
+Author: Aubrey Nickerson
+Date: September 16th, 2020
+Program: index.html
+Project: Construction App
+
+This is the register page.
+It contains two radio buttons, "Login"
+and "Register". While registering, the user
+must select if they're an employee, or admin. 
+The user must also select the check box in agreement to data
+protection regulations. It contains both CSS and JavaScript
+libraries such as jQuery and CSS fonts. 
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <meta name="viewport" content="initial-scale=1, width=device-width, height=device-height, viewport-fit=cover">
 <head>
+    
+    <!-- Add CSS libraries -->
     <link rel="stylesheet" href="../css/loginPage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta http-equiv="Content-Security-Policy" content="connect-src *"/>
     <meta charset="UTF-8">
     <title>Title</title>
+    
+    <!-- Add JS libraries -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="../js/register.js"></script>
 </head>
@@ -14,10 +33,16 @@
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 
+<!-- Display header image-->
 <header class="header-img">
     <img src="../img/Icon_better.png" class="header-img">
 </header>
+        
 <div class="testbox fadeInDown">
+    
+    <!-- Radio Buttons:
+        If user selects "Login" then user is redirected to the login page.
+        -->
     <div class="accounttype fadeIn first">
         <input type="radio" value="None" id="radioOne" name="account" onclick="window.location='../index.html';"/>
         <label for="radioOne" class="radio" > Login</label>
@@ -30,25 +55,29 @@
 
     <hr>
     <div class="fadeIn second">
+        
+        <!-- Email Field -->
         <div><label id="icon" for="empid"><i class="fa fa-address-card-o" aria-hidden="true"></i></label>
-
         <input type="email" name="empidinput" id="empid" value="" placeholder="Email" align="" required/></div>
 
+        <!-- Radio Buttons:
+        User must select if they're an employee or administrator.
+        -->
     <div class="empType fadeIn third" style="margin-top:5vh;">
         <input type="radio" value="Employee" id="employee" name="icon" checked/>
         <label for="employee" class="radio">Employee</label>
         <input type="radio" value="Administrator" id="admin" name="icon" />
         <label for="admin" class="radio">Admin</label>
 
+        <!-- Checkbox for agreeing to terms. -->
         <div class="fadeIn third" style="margin-top:1vh;">
             <input type="checkbox" class="larger" name="check" id="check" value="Yes" style="margin-left: 25px; margin-top: 25px; margin-bottom:25px;">
             <label for="check" style="margin-left:15px; align:center; font-size: 10px;">By Registering I agree to the Terms and Conditions </label>
         </div>
     </div>
-
-
-
     </form>
+        
+    <!-- Submit button -->    
     <div class="btn-block fadeIn fourth" style="padding-top:4vh;padding-bottom:2vh">
         <button class="button fadeIn fourth" id="submit" name="submit">Register</button>
     </div>
