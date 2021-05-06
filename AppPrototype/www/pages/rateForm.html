@@ -1,6 +1,25 @@
+<!-- 
+Author: Aubrey Nickerson
+Date: September 19th, 2020
+Program: rateForm.html
+Project: Construction App
+
+This is the rate form page. 
+It rates the suggestion form
+that was created by the employees
+for the administration to review. 
+The administrator decides whether 
+they fully agree, more likely to agree,
+neither nor, rather not agree, or do 
+not agree at all with the employees
+suggestion form.
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
+	
+	<!-- Add CSS libraries -->
 	<link rel="stylesheet" href="../css/suggestionForm.css">
 	<link rel="stylesheet" href="../css/navbar.css">
 	<meta charset="UTF-8">
@@ -8,6 +27,8 @@
 	<title>Suggestion Form</title>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+	
+	<!-- Add JS libraries -->
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script type="text/javascript" src="../js/rateForm.js"></script>
 	<style>
@@ -25,14 +46,17 @@
 	</style>
 </head>
 
+<!-- Add header image to the top -->
 <header class="header-img">
 	<img src="../img/Icon_better.png" class="header-img">
-
 </header>
 
 <body>
 <form id="submitRateForm" enctype="multipart/form-data">
 	<div class="app">
+		
+		<!-- Create table form of evaluation questions and admin answers one of five options for each question -->
+		<!-- Admin rates the relevancy of the employees suggestion form -->
 		<table>
 			<tbody>
 			<tr>
@@ -178,7 +202,7 @@
 					and advertising</td>
 				<td><textarea rows='3' id="addedValue" name="addedValue"></textarea></td>
 				<td id="placeHolder">N/A</td>
-			</tr>
+			</tr>	
 			<tr>
 				<td id="col1" >7</td>
 				<td>Your cost estimate for conversion into euros.</td>
@@ -218,6 +242,8 @@
 			</tr>
 			</tbody>
 		</table>
+		
+		<!-- Submit button -->
 		<div class="btn-block">
 			<button type="submit" id="submit" name="submit">Submit</button>
 			<button type="submit" id="goback" name="goback" onclick="window.location = '../pages/menu.html';">Go Back</button>
@@ -226,6 +252,7 @@
 </form>
 </body>
 <script>
+	// Function for calculating the relevancy of the suggestion form. 
 	function showWeightValue(numVal, weightIDNum, weightPer){
 		document.getElementById('weight' + weightIDNum).innerHTML = ((((numVal * 20) / 100) * weightPer) * 100).toFixed(2) + "%";
 	}
