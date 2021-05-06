@@ -4,7 +4,7 @@ This mobile application facilitates the submission of issues found on job sites,
 
 # Functional Requirements
 1. Employees should be able to register (innovator and worker)<br /> <br />
-![alt text](https://github.com/humbleguidant/ConstructionApp/blob/master/zublinAppPhotos/register.PNG?raw=true) <br/>
+![alt text](https://github.com/humbleguidant/ConstructionApp/blob/master/zublinAppPhotos/register.PNG?raw=true) <br/> <br/>
 2. 1. Item 1
 3.  
 
