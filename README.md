@@ -1,5 +1,5 @@
 # Construction App
-This is an app made in Apache Cordova. It is a construction app for employees to send report forms to administration.
+This mobile application facilitates the submission of issues found on job sites, solutions to issues reported on job sites, as well as the rating and review of said solutions. 
 
 
 
