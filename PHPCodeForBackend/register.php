@@ -1,4 +1,17 @@
 <?php
+/* 
+Author: Aubrey Nickerson
+Date: September 28th, 2020
+Program: register.php
+Project: Construction App
+
+This php script receives an AJAX call from the 
+login javascript file. It receives the data
+and creates a connection to the database. The data from
+the AJAX call will be handled with the database. 
+The database checks if the user exists.
+*/
+
     include("Mysql.php");
     $my_sql = new Mysql();
     $my_sqli = $my_sql->dbConnect();
