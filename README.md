@@ -3,5 +3,8 @@ This mobile application facilitates the submission of issues found on job sites,
 
 
 # Functional Requirements
-1. Item 1
+1. Employees should be able to register (innovator and worker)
 ![alt text](https://github.com/humbleguidant/ConstructionApp/blob/master/zublinAppPhotos/forgotPassword.PNG?raw=true)
+2. 1. Item 1
+3.  
+
