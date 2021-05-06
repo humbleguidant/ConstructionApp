@@ -22,12 +22,12 @@ and the possibility to revoke this consent at any time).
 9. Password and Id recovery links
 10. Contact us for help link
 11. Report form must have
-• Description of solution with optional sketch or picture.
-• What is the advantage of solution?
-• Has the proposal been tested small scale, if so what occurred
+  • Description of solution with optional sketch or picture.
+  • What is the advantage of solution?
+  • Has the proposal been tested small scale, if so what occurred
 12. Rate form must have each of the following rated from one to 5
-• The idea is new
-• The idea is suited to solve problem
-• The idea is relevant to many users
-• Easy to integrate into work process 
+  • The idea is new
+  • The idea is suited to solve problem
+  • The idea is relevant to many users
+  • Easy to integrate into work process 
 
