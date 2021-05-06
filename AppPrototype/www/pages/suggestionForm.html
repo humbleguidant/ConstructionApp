@@ -1,6 +1,23 @@
+<!-- 
+Author: Aubrey Nickerson
+Date: September 20th, 2020
+Program: suggestionForm.html
+Project: Construction App
+
+This is the suggestion form page.
+When an employee sees something
+suspicous at the construction site then
+they use this page to send a suggestion
+form to administration. They can send images
+if needed. It contains both CSS and JavaScript
+libraries such as jQuery and CSS fonts. 
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
+    <!-- Add CSS libraries -->
     <link rel="stylesheet" href="../css/suggestionForm.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <meta charset="UTF-8">
@@ -8,13 +25,16 @@
     <title>Suggestion Form</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    
+    <!-- Add JS libraries -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="../js/suggestionForm.js"></script>
 </head>
 <body>
+    
+<!-- Display header image-->
 <header class="header-img">
     <img src="../img/Icon_better.png" class="header-img">
-
 </header>
 
 <div class="testbox">
@@ -119,6 +139,9 @@
 
 
 <script>
+    
+    // Functions for displaying and hiding certain
+    // text fields.
     function showMoreDescription(elementId) {
         var x = document.getElementById("exp-desc");
         if (x.style.display === "none") {
