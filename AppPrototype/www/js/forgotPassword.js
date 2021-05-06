@@ -32,9 +32,11 @@ $(document).ready(function() {
             },
             // If the AJAX call was successful then handle the repsonse. 
             success: function(data){
+                // If the email does not exist then alert the user.
                 if(data === "This email is not registered in the system. Please sign up or contact the administrator."){
                     alert(data);
                     return false;
+                // If there was an error updating the password then alert the user.     
                 } else if(data === "There was an error updating your password. Please contact the administrator."){
                     alert(data);
                     return false;
