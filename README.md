@@ -16,18 +16,18 @@ This mobile application facilitates the submission of issues found on job sites,
 5. Pictures can be submitted with issue <br /> <br/>
 ![alt text](https://github.com/humbleguidant/ConstructionApp/blob/master/zublinAppPhotos/suggForm4.PNG?raw=true) <br /> <br />
 6. check box where people need to confirm a text (consent to the use of personal data
-and the possibility to revoke this consent at any time).
-7. Must sign in with id and password
-8. Password must have at least 6 characters, 1 letter, 1 number, 1 special character
-9. Password and Id recovery links
-10. Contact us for help link
-11. Report form must have
-  • Description of solution with optional sketch or picture.
-  • What is the advantage of solution?
-  • Has the proposal been tested small scale, if so what occurred
-12. Rate form must have each of the following rated from one to 5
+and the possibility to revoke this consent at any time). <br /> <br />
+7. Must sign in with id and password <br /> <br />
+8. Password must have at least 6 characters, 1 letter, 1 number, 1 special character <br /> <br />
+9. Password and Id recovery links <br /> <br />
+10. Contact us for help link <br /> <br />
+11. Report form must have <br />
+  • Description of solution with optional sketch or picture. <br />
+  • What is the advantage of solution? <br />
+  • Has the proposal been tested small scale, if so what occurred <br /> <br />
+12. Rate form must have each of the following rated from one to 5 <br /> 
   • The idea is new
   • The idea is suited to solve problem
   • The idea is relevant to many users
-  • Easy to integrate into work process 
+  • Easy to integrate into work process <br /> <br />
 
